@@ -1,0 +1,18 @@
+pipeline {
+    
+    agent {
+        node {
+            label 'WindowsEC2'
+        }
+    }
+
+    stages {
+
+        stage('prepare') {
+            steps {
+                echo 'Here are the files:'
+                echo dir                
+            }
+        }
+    }
+}
